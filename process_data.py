@@ -5,14 +5,9 @@ from modules import vascular_data as sv
 import scipy
 import numpy as np
 from imageio import imsave
-parser = argparse.ArgumentParser()
-parser.add_argument('global_config_file')
-parser.add_argument('case_config_file')
 
-args = parser.parse_args()
-
-global_config_file = os.path.abspath(args.global_config_file)
-case_config_file = os.path.abspath(args.case_config_file)
+global_config_file = "./config/global.yaml"
+case_config_file   = "./config/case.yaml"
 
 
 global_config = io.load_yaml(global_config_file)
